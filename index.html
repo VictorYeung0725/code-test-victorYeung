@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
   <script defer src="./app.js"></script>
 
   <title>Movie API</title>
@@ -16,13 +15,30 @@
 
   <div class="shadow-lg rounded-lg overflow-hidden bg-white">
     <div class="shadow-lg rounded-lg overflow-hidden bg-white grid place-items-center ">
+      <h1>Movie + TV Search</h1>
       <input id="searchbox"
         class="text-xl block w-80 appearance-none bg-white placeholder-gray-400 px-4 py-3 rounded-lg outline-none"
         placeholder="Search for movie">
 
       <div class="search-list" id="title">
-        <ul id="search-list">
-        </ul>
+        <div id="search-list">
+          <ul>
+            <li><a href="#" class="block hover:bg-gray-200 rounded px-2 py-1"><strong>The God</strong> &amp; Jesus
+                Show</a></li>
+            <li><a href="#" class="block hover:bg-gray-200 rounded px-2 py-1"><strong>The God</strong> of Risk</a></li>
+            <li><a href="#" class="block hover:bg-gray-200 rounded px-2 py-1">Cruise of <strong>the God</strong>s</a>
+            </li>
+          </ul>
+
+          <ul>
+            <li><a href="#" class="block hover:bg-gray-200 rounded px-2 py-1"><strong>The God</strong> &amp; Jesus
+                Show</a></li>
+            <li><a href="#" class="block hover:bg-gray-200 rounded px-2 py-1"><strong>The God</strong> of Risk</a></li>
+            <li><a href="#" class="block hover:bg-gray-200 rounded px-2 py-1">Cruise of <strong>the God</strong>s</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
     </div>

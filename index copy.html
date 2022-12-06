@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./app copy.js"></script>
+
+
+  <title>Movie API</title>
+</head>
+
+<body class="p-6 md:p-24 bg-gray-200">
+
+  <div class="shadow-lg rounded-lg overflow-hidden bg-white">
+    <div class="shadow-lg rounded-lg overflow-hidden bg-white grid place-items-center ">
+      <h1>Movie + TV Search</h1>
+      <input id="searchbox"
+        class="text-xl block w-80 appearance-none bg-white placeholder-gray-400 px-4 py-3 rounded-lg outline-none"
+        placeholder="Search for movie">
+
+      <div id="search-list">
+        <h3 class="text-xs text-gray-600 pl-2 py-1 hidden" id="movieTitle">Movies</h3>
+        <h3 class="text-xs text-gray-600 pl-2 py-1 hidden" id="tvtitle">TV Shows</h3>
+        <ul id="tvType">
+
+        </ul>
+      </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

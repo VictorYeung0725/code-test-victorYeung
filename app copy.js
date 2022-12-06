@@ -11,7 +11,7 @@ const movieTitle = document.getElementById('title');
 async function loadMovies(userInput, movie) {
   const URL =
     `https://omdbapi.com/?s=${userInput}&page=2&apikey=604291d7` + movie;
-  console.log(URL);
+  // console.log(URL);
   const res = await fetch(`${URL}`);
   const data = await res.json();
   console.log(data.Search);
@@ -39,11 +39,12 @@ function findMovies() {
 
 function displayMovieList(movies) {
   searchList.innerHTML = '';
-  for (let i = 0; i <= 2; i++) {
-    let movieListItem = document.createElement('ul');
-    movieListItem.innerHTML = `<li class="block hover:bg-gray-200 rounded px-2 py-1"><strong></strong>${movies[i].Title}</li>`;
-    movieListItem.classList.add('search-list-item');
-    searchList.appendChild(movieListItem);
+  // targetElement.insertAdjacentElement(position, elementToBeInserted);
+  let movieType = document.createElement('ul');
+  for (let i = 0; i < 3; i++) {
+    movieType.innerHTML += `<li class="block hover:bg-gray-200 rounded px-2 py-1"><strong></strong>${movies[i].Title}</li>`;
+    movieType.classList.add('search-list-item');
+    searchList.appendChild(movieType);
   }
 }
 
