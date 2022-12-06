@@ -3,11 +3,9 @@ Titles: https://omdbapi.com/?s=thor&page=2&apikey=604291d7
 details: http://www.omdbapi.com/?i=tt3896198&apikey=604291d7
 */
 
-// 2. XMLrequest fetch API async function load API data (s=${searchTerm})
-// 3. re-render the html
-
 const searchbox = document.getElementById('searchbox');
 const searchList = document.getElementById('search-list');
+const movieTitle = document.getElementById('title');
 
 // load movies from API
 async function loadMovies(userInput) {
@@ -34,15 +32,16 @@ function findMovies() {
 
 function displayMovieList(movies) {
   // For redenring title
+  // movieTitle.innerHTML = '';
+
+  //display the data to UI
+  searchList.innerHTML = '';
   let title = document.createElement('h3');
   title.innerHTML = `
   <h3 class="text-xs text-gray-600 pl-2 py-1">Movies</h3>
   `;
-  document.getElementById('title').insertAdjacentElement('afterbegin', title);
-
-  //display the data to UI
-  searchList.innerHTML = '';
-  for (let i = 0; i <= 3; i++) {
+  movieTitle.insertAdjacentElement('afterbegin', title);
+  for (let i = 0; i <= 2; i++) {
     let movieListItem = document.createElement('li');
     movieListItem.innerHTML = `
     <li class="block hover:bg-gray-200 rounded px-2 py-1"><strong></strong>${movies[i].Title}</li>
