@@ -21,3 +21,8 @@ the Challenge :
 solution to challenge 2 : <br />
 https://stackoverflow.com/questions/29896907/bold-part-of-string <br />
 this might help for me to bold the userInput part of the movie 
+function boldString(str, substr) { <br />
+  var strRegExp = new RegExp(substr, 'g'); <br />
+  let boldName = str.replace(strRegExp, '<b>' + substr + '</b>'); <br />
+  return boldName; <br />
+}
